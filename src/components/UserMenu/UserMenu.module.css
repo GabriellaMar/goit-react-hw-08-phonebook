@@ -1,0 +1,5 @@
+.userMenuContainer{
+    display: flex;
+    flex-shrink: 0;
+    gap: 25px;
+}
