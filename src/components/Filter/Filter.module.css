@@ -6,6 +6,7 @@
     outline: none;
     cursor: pointer;
     width: 480px;
+    margin: 0 auto;
 }
 .filterInput:focus {
     border-color: rgb(198, 198, 253);

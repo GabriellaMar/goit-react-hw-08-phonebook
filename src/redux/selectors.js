@@ -1,21 +1,22 @@
-//  import { createSelector } from "@reduxjs/toolkit";
+ import { createSelector } from "@reduxjs/toolkit";
 
-// export const selectContacts = state => state.contacts.contacts.items;
-// export const selectFilter = state => state.filter.filter 
+export const selectContacts = state => state.contacts.contacts.items;
+export const selectFilter = state => state.filter.filter
 export const selectUserLoading = state => state.auth.isLoading;
 export const selectUserError = state => state.auth.error;
 export const selectToken = state => state.auth.token;
 export const selectUser = state => state.auth.user;
 export const selectRegistrated = state => state.auth.registrated;
 
-// export const selectFilteredContacts = createSelector(
-//     [
-//         selectFilter, 
-//         selectContacts, 
-//       ], 
-//        (filter, filteredContacts)=>{
-//         return filteredContacts.filter(
-//             (contact) => contact.name && contact.name.toLowerCase().includes(filter.toLowerCase())
-//           ) 
-//       }
-// )
+
+export const selectFilteredContacts = createSelector(
+    [
+        selectFilter, 
+        selectContacts, 
+      ], 
+       (filter, filteredContacts)=>{
+        return filteredContacts.filter(
+            (contact) => contact.name && contact.name.toLowerCase().includes(filter.toLowerCase())
+          ) 
+      }
+)
