@@ -11,8 +11,7 @@ import { Avatar } from 'antd';
 export const UserMenu =()=>{
     const dispatch = useDispatch() 
     const user = useSelector(selectUser)
-//     const {  UserOutlined  } = icons;
-// const {  Avatar, Space  } = antd;
+
 
 const handleLogOut =()=>{
     dispatch(logOutUserThunk())
@@ -20,14 +19,10 @@ const handleLogOut =()=>{
 
     return (
         <div className={styles.userMenuContainer}>
-     {/* <Space wrap size={16}> */}
         <Avatar size={60} icon={<UserOutlined />} />
-        {/* <Avatar size="large" icon={<UserOutlined />} />
-        <Avatar icon={<UserOutlined />} />
-        <Avatar size="small" icon={<UserOutlined />} />
-      </Space> */}
+      
             <p className={styles.welcomeText}>Welcome, {user.email}</p>
-            <button type='button'onClick ={handleLogOut}>Log out</button>
+            <button type='button'onClick ={handleLogOut} className={styles.userMenuBtn}>Log out</button>
         </div>
     )
 }

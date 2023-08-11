@@ -3,6 +3,7 @@ import styles from './ContactList.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContactThunk } from 'redux/operations';
 import { selectFilteredContacts } from 'redux/selectors';
+import { DeleteOutlined  } from '@ant-design/icons';
 
 
 export const ContactList = () => {
@@ -17,10 +18,18 @@ export const ContactList = () => {
             <ul className={styles.contactList}>
                  {filteredContacts.length === 0 && <p>There are no contacts found!</p>}
                 {filteredContacts.length > 0 && filteredContacts.map(contact => (
-                    <li className={styles.contactItem} key={contact.id}>{contact.name}: &nbsp;&nbsp; {contact.number}
+                    <li className={styles.contactItem} key={contact.id}>
+                        <div className={styles.contactName}>{contact.name}:</div>
+                           <div className={styles.contact}> 
+                    <div className={styles.contactNumber}>{contact.number}</div>
+                       
+                    
                         <button type="button" className={styles.deleteContactBtn}
                             onClick={ () => handleDeleteContact(contact.id)}>
-                            Delete</button>
+                            Delete
+                            <DeleteOutlined className={styles.deleteIcon} />
+                            </button> 
+                              </div> 
                     </li>
                 ))}
 

@@ -1,6 +1,8 @@
+
 import { useDispatch } from 'react-redux'
 import { registerUserThunk } from 'redux/operations'
 import styles from './RegistrationForm.module.css'
+import { UserOutlined, MailOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 
 export const RegistrationForm = () => {
    const dispatch = useDispatch()
@@ -16,15 +18,16 @@ export const RegistrationForm = () => {
          password: form.elements.userPassword.value
       })
       );
-      // form.reset();
+      form.reset();
    }
 
-   return <>
-      <h1>Register Your Account</h1>
+   return <div className={styles.registerContainer}>
+      <h2 className={styles.registerTittle}>Register Your Account</h2>
       <form className={styles.registrationForm}
          autoComplete='off' onSubmit={handleSubmit} >
          <label className={styles.registrationLabel}>
             Name
+            <UserOutlined  className={styles.formIcon} />
             <input className={styles.registrationInput}
                type="text"
                name="userName"
@@ -33,6 +36,7 @@ export const RegistrationForm = () => {
          </label>
          <label className={styles.registrationLabel}>
             Email
+            <MailOutlined  className={styles.formIcon} />
             <input className={styles.registrationInput}
                type="email"
                name="userEmail"
@@ -41,6 +45,7 @@ export const RegistrationForm = () => {
          </label>
          <label className={styles.registrationLabel}>
             Password
+            <EyeInvisibleOutlined  className={styles.formIcon} />
             <input className={styles.registrationInput}
                type="password"
                name="userPassword"
@@ -50,5 +55,5 @@ export const RegistrationForm = () => {
          </label>
          <button type="submit" className={styles.registrationBtn}>Sign up</button>
       </form>
-   </>
+   </div>
 }

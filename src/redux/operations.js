@@ -62,10 +62,9 @@ export const logOutUserThunk = createAsyncThunk('auth/logout', async (_, thunkAp
 
 //------Operations with Contacts------------
 export const fetchContactsThunk = createAsyncThunk('contacts/fetchAllContacts',
-    async (token, thunkApi) => {
+    async (_, thunkApi) => {
 
         try {
-            setToken(token)
             const { data } = await instance.get('/contacts');
             return data;
 
@@ -75,10 +74,9 @@ export const fetchContactsThunk = createAsyncThunk('contacts/fetchAllContacts',
     })
 
 export const addContactThunk = createAsyncThunk('contacts/addContact',
-    async ({ contact, token }, thunkApi) => {
+    async (contact, thunkApi) => {
         try {
             const { data } = await instance.post('/contacts', contact);
-            setToken(token);
             return data;
 
         } catch (error) {

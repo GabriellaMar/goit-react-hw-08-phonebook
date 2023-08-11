@@ -1,18 +1,34 @@
 .filterInput{
     font-size: 20px;
-    padding: 5px;
-    margin-top: 7px;
+    padding: 13px 13px 13px 47px;
+    margin-top: 12px;
     border-radius: 4px;
     outline: none;
     cursor: pointer;
-    width: 480px;
-    margin: 0 auto;
+    /* width: 900px; */
+    min-width: 500px;
+    border-color: transparent;
+    box-shadow: 0px 1px 4px rgba(86, 114, 110, 0.856);
 }
 .filterInput:focus {
-    border-color: rgb(198, 198, 253);
-    box-shadow: 0px 1px 4px 1px  rgb(169, 169, 170);
+    border-color: transparent;
+    box-shadow: 0px 1px 4px 1px  rgba(115, 189, 207, 0.989);
   }
 .filterTitle{
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    color: rgb(68, 68, 68);
 }
+
+.filterContainer{
+    position: relative;
+}
+
+.filterIcon{
+    position: absolute;
+    top:30px;
+    left: 13px;
+    color: rgb(87, 87, 87);;
+} 

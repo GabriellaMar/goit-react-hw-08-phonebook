@@ -1,6 +1,11 @@
+import { StyledMainTittle, StyledParagraph } from "App.slyled";
+
 const HomePage = ()=>{
 return (
-    <h1>Welcome to your PhoneBook 📔 </h1>
+    <>
+    <StyledMainTittle>Welcome to your PhoneBook 📔 </StyledMainTittle>
+    <StyledParagraph>Register and create your private contact book</StyledParagraph>
+    </>
 )
 }
 
