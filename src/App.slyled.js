@@ -37,7 +37,7 @@ padding: 30px 40px;
         text-decoration: none;
         text-transform: uppercase;
         color: black;
-        font-size: 20px;
+        font-size: 17px;
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-left: 20px;
