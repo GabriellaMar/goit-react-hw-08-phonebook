@@ -21,7 +21,7 @@ const handleLogOut =()=>{
         <div className={styles.userMenuContainer}>
         <Avatar size={60} icon={<UserOutlined />} />
       
-            <p className={styles.welcomeText}>Welcome, {user.email}</p>
+            <p className={styles.welcomeText}>Welcome, {user.name}</p>
             <button type='button'onClick ={handleLogOut} className={styles.userMenuBtn}>Log out</button>
         </div>
     )
