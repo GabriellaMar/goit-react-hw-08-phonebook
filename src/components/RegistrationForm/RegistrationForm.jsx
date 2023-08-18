@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { registerUserThunk } from 'redux/operations'
 import styles from './RegistrationForm.module.css'
 import { UserOutlined, MailOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { FormInput, StyedFormTitle, StyledLoginBtn, StyledLoginForm, StyledLoginFormLabel } from 'components/LoginForm/LoginForm.styled';
 
 export const RegistrationForm = () => {
    const dispatch = useDispatch()
@@ -22,38 +23,38 @@ export const RegistrationForm = () => {
    }
 
    return <div className={styles.registerContainer}>
-      <h2 className={styles.registerTittle}>Register Your Account</h2>
-      <form className={styles.registrationForm}
+      <StyedFormTitle className={styles.registerTittle}>Register Your Account</StyedFormTitle>
+      <StyledLoginForm className={styles.registrationForm}
          autoComplete='off' onSubmit={handleSubmit} >
-         <label className={styles.registrationLabel}>
+         <StyledLoginFormLabel>
             Name
-            <UserOutlined  className={styles.formIcon} />
-            <input className={styles.registrationInput}
+            <UserOutlined  className='formIcon' />
+            <FormInput className='registrationInput'
                type="text"
                name="userName"
                required
             />
-         </label>
-         <label className={styles.registrationLabel}>
+         </StyledLoginFormLabel>
+         <StyledLoginFormLabel >
             Email
-            <MailOutlined  className={styles.formIcon} />
-            <input className={styles.registrationInput}
+            <MailOutlined  className='formIcon' />
+            <FormInput className='registrationInput'
                type="email"
                name="userEmail"
                required
             />
-         </label>
-         <label className={styles.registrationLabel}>
+         </StyledLoginFormLabel>
+         <StyledLoginFormLabel >
             Password
-            <EyeInvisibleOutlined  className={styles.formIcon} />
-            <input className={styles.registrationInput}
+            <EyeInvisibleOutlined  className='formIcon' />
+            <FormInput className='registrationInput'
                type="password"
                name="userPassword"
                required
                minLength={7}
             />
-         </label>
-         <button type="submit" className={styles.registrationBtn}>Sign up</button>
-      </form>
+         </StyledLoginFormLabel>
+         < StyledLoginBtn type="submit" className={styles.registrationBtn}>Sign up</ StyledLoginBtn>
+      </StyledLoginForm>
    </div>
 }

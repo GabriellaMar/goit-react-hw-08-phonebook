@@ -1,7 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { loginUserThunk } from 'redux/operations'
-import styles from './LoginForm.module.css'
+// import styles from './LoginForm.module.css'
 import { MailOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { FormInput, StyedFormTitle, StyledLoginBtn, StyledLoginForm, StyledLoginFormLabel } from './LoginForm.styled';
 
 
 
@@ -18,30 +19,30 @@ export const LoginForm = () => {
    }
 
    return (
-      <div className={styles.loginContainer}>
-         <h2 className={styles.LoginTittle}>Login Into Your Account</h2>
-         <form className={styles.loginForm} onSubmit={handleSubmit}
+      <div className='loginContainer'>
+         < StyedFormTitle >Login Into Your Account</ StyedFormTitle>
+         <StyledLoginForm  onSubmit={handleSubmit}
             autoComplete='off'>
-            <label className={styles.loginFormLabel}>
+            <StyledLoginFormLabel >
                Email
-               <MailOutlined className={styles.formIcon} />
-               <input className={styles.loginFormInput}
+               <MailOutlined className='formIcon'/>
+               <FormInput 
                   type="email"
                   name="userEmail"
                   required
                />
-            </label>
-            <label className={styles.loginFormLabel}>
+            </StyledLoginFormLabel>
+            <StyledLoginFormLabel >
                Password
-               <EyeInvisibleOutlined className={styles.formIcon} />
-               <input className={styles.loginFormInput}
+               <EyeInvisibleOutlined className='formIcon' />
+               <FormInput 
                   type="password"
                   name="userPassword"
                   required
                />
-            </label>
-            <button className={styles.loginFormBtn} type="submit">Log in </button>
-         </form>
+            </StyledLoginFormLabel>
+            <StyledLoginBtn  type="submit">Log in </StyledLoginBtn>
+         </StyledLoginForm >
 
       </div>
 

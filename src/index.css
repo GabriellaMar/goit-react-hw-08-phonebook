@@ -8,7 +8,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(rgba(211, 234, 235, 0.783) 20%, rgba(238, 245, 200, 0.1) 100%, rgba(221, 248, 244, 0.856) 100%);
+  /* background: radial-gradient(rgba(242, 247, 247, 0.92); 20%, rgba(238, 245, 200, 0.1) 100%, rgba(221, 248, 244, 0.856) 100%); */
+  background-color:  rgba(242, 247, 247, 0.783);
+  background: radial-gradient(rgba(222, 227, 227, 0.92) 20%, rgba(238, 245, 200, 0.1) 100%, rgba(221, 248, 244, 0.856) 100%);
+  background-color:  rgba(239, 245, 245, 0.92)
+  /* background: #72ac6f; */
+ 
+  /* background: #83c67f; */
+  /* background: radial-gradient(rgba(235, 237, 237, 0.783) 20%, rgba(188, 188, 187, 0.1) 100%, rgba(165, 166, 166, 0.856) 100%); */
+ 
 }
 
 code {

@@ -1,12 +1,13 @@
 import React from 'react';
 import { useState } from "react";
 // import PropTypes from 'prop-types';
-import styles from './ContactForm.module.css'
+// import styles from './ContactForm.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { addContactThunk } from "redux/operations";
 import { selectFilteredContacts } from "redux/selectors";
 
 import { UserOutlined, PhoneOutlined } from '@ant-design/icons';
+import { ContactInput, StyledAddBtn, StyledContactForm, StyledContactLabel } from './ContactForm.styled';
 
 
 export const ContactForm = () => {
@@ -46,11 +47,11 @@ export const ContactForm = () => {
   }
 
   return <>
-    <form className={styles.contactForm} onSubmit={handleSubmit}>
-      <label className={styles.formLabel}>
+    <StyledContactForm  onSubmit={handleSubmit}>
+      <StyledContactLabel >
         Name
-      <UserOutlined  className={styles.iconPhone} />
-        <input className={styles.formInput}
+      <UserOutlined  className='iconPhone'/>
+        <ContactInput 
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -60,11 +61,11 @@ export const ContactForm = () => {
           value={name}
           onChange={handleChange}
         />
-      </label>
-      <label className={styles.formLabel}>
+      </StyledContactLabel>
+      <StyledContactLabel >
         Number
-        <PhoneOutlined  className={styles.iconPhone} />
-        <input className={styles.formInput}
+        <PhoneOutlined  className='iconPhone' />
+        <ContactInput 
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -74,9 +75,9 @@ export const ContactForm = () => {
           value={number}
           onChange={handleChange}
         />
-      </label>
-      <button className={styles.formAddBtn} type="submit">Add contact </button>
-    </form>
+      </StyledContactLabel>
+      <StyledAddBtn  type="submit">Add contact </StyledAddBtn>
+    </StyledContactForm>
   </>
 }
 

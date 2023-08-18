@@ -12,14 +12,20 @@ margin: 0 auto;
 `;
 
 export const StyledContainer = styled.div`
-padding: 25px 55px;
+padding: 20px 17px;
 margin: 0 auto;
+
+@media screen and (min-width: 480px){
+  padding: 25px 55px;
+  }
 `
 export const StyledHeader = styled.header`
-display: flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-padding: 30px 40px;
+    gap:25px;
+    padding: 30px 15px ;
+
  position: relative;
 
 &::after {
@@ -28,8 +34,14 @@ padding: 30px 40px;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 7px; /* Висота тіні */
+  height: 7px; 
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);}
+
+  @media screen and (min-width: 768px){
+    flex-direction: row;
+    padding: 30px 20px;
+    justify-content: space-between;
+  }
   
 
 .NavLink{
@@ -37,27 +49,37 @@ padding: 30px 40px;
         text-decoration: none;
         text-transform: uppercase;
         color: black;
-        font-size: 17px;
+        font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-left: 20px;
+    /* margin-left: 10px; */
+
+    @media screen and (min-width: 480px){
+      font-size: 17px;
+    font-weight: 700;
+    }
     
     }
     .NavLink.active{
-      color: rgba(15, 200, 213, 0.989);
+      /* color: rgba(15, 200, 213, 0.989); */
+      color: #5fd38e;
     }
 `
 export const StyledNav = styled.nav`
-display: flex;
-gap: 25px;
+/* display: flex; */
+gap: 20px;
 font-weight: 500;
     font-size: 18px;
-/* justify-content: space-between; */
 
 .headerNavContainer{
     display: flex;
     gap: 25px;
 }
+
+@media screen and (min-width: 480px){
+  gap: 25px;
+    }
 `
 export const StyledLoading = styled.div`
   display: flex;
@@ -74,11 +96,18 @@ export const StyledLoading = styled.div`
 `
 
 export const StyledTittle = styled.h2`
-margin-top:50px;
- font-size: 38px;
+    margin-top:20px;
+    font-size: 30px;
     font-weight: 700;
     color: rgb(40, 39, 39); 
+
+    @media screen and (min-width: 480px){
+      margin-top:50px;
+      font-size: 38px;
+      font-weight: 700;
+    }
 `
+
 export const StyledMainTittle = styled.h1`
  font-size: 50px;
     font-weight: 700;

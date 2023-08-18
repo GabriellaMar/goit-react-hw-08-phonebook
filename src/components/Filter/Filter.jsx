@@ -1,8 +1,9 @@
-import styles from './Filter.module.css'
+// import styles from './Filter.module.css'
 import PropTypes from 'prop-types';
 import { setFilter } from 'redux/slice.js/filterSlice';
 import { useDispatch } from 'react-redux';
 import { SearchOutlined } from '@ant-design/icons';
+import { StyledFilterContainer, StyledFilterInput, StyledFilterTittle } from './Filter.styled';
 
 export const Filter = ({ filter }) => {
     const dispatch = useDispatch();
@@ -12,10 +13,10 @@ export const Filter = ({ filter }) => {
     }
     return (
         < >
-            <p className={styles.filterTitle}>Find contacts by name</p>
-            <div className={styles.filterContainer} >
-            <span className={styles.filterIcon} ><SearchOutlined /></span>
-            <input className={styles.filterInput}
+            <StyledFilterTittle>Find contacts by name</StyledFilterTittle>
+            <StyledFilterContainer >
+            <span className='filterIcon'><SearchOutlined /></span>
+            <StyledFilterInput 
             
                 type="text"
                 name="filter"
@@ -24,7 +25,7 @@ export const Filter = ({ filter }) => {
                 value={filter}
                 onChange={handleFilterChange}
             />
-            </div>
+            </StyledFilterContainer>
         </>
     )
 }
