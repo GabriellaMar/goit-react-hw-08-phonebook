@@ -8,6 +8,7 @@ export const Navigation = () => {
     const registrated = useSelector(selectRegistrated)
     return (
         <StyledNav>
+            <a className="logo"> 📔PHONEBOOK</a>
             <NavLink className="NavLink" to="/">Home</NavLink>
             {registrated && (<NavLink className="NavLink" to="/contacts">Contacts</NavLink>)}
         </StyledNav>

@@ -76,6 +76,10 @@ font-weight: 500;
     display: flex;
     gap: 25px;
 }
+.logo{
+  font-size: 18px;
+  font-weight: 700;
+}
 
 @media screen and (min-width: 480px){
   gap: 25px;
@@ -90,7 +94,7 @@ export const StyledLoading = styled.div`
 
   .ant-spin-dot {
     .ant-spin-dot-item {
-      background-color: rgba(54, 210, 248, 0.989);
+      background-color: #5fd38e;
     }
   }
 `
