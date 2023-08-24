@@ -62,7 +62,7 @@ export const StyledHeader = styled.header`
 `
 export const StyledNav = styled.nav`
 display: flex;
-justify-content: center;
+align-items: center;
 gap: 20px;
 font-weight: 500;
     font-size: 18px;
