@@ -2,13 +2,9 @@ import styled from "styled-components";
 
 
 export const StyledApp = styled.div`
- /* max-width: 1000px;  */
-margin: 0 auto; 
-/* box-shadow: 0px 1px  4px rgba(86, 114, 110, 0.856);  */
+ margin: 0 auto; 
  padding-bottom: 25px; 
  height: 100vh; 
-
-  /* background: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%); */
 `;
 
 export const StyledContainer = styled.div`
@@ -48,12 +44,11 @@ export const StyledHeader = styled.header`
     display: inline-block;
         text-decoration: none;
         text-transform: uppercase;
-        color: black;
+        color: rgb(40, 39, 39); 
         font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-left: 20px;
-    /* margin-left: 10px; */
 
     @media screen and (min-width: 480px){
       font-size: 17px;
@@ -62,12 +57,12 @@ export const StyledHeader = styled.header`
     
     }
     .NavLink.active{
-      /* color: rgba(15, 200, 213, 0.989); */
       color: #5fd38e;
     }
 `
 export const StyledNav = styled.nav`
-/* display: flex; */
+display: flex;
+justify-content: center;
 gap: 20px;
 font-weight: 500;
     font-size: 18px;
@@ -79,6 +74,9 @@ font-weight: 500;
 .logo{
   font-size: 18px;
   font-weight: 700;
+  color: rgb(57 55 55);
+  letter-spacing: 0.1px;
+ 
 }
 
 @media screen and (min-width: 480px){
@@ -124,4 +122,11 @@ export const StyledParagraph = styled.p`
     font-weight: 700;
     text-align: center;
     color: rgb(56, 54, 54); 
+
+`
+
+export const StaledTekhParagraph = styled.p`
+ text-align: center;
+ color: rgb(56, 54, 54);
+ margin-bottom: auto;
 `
