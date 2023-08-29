@@ -1,7 +1,7 @@
 
 import { useDispatch } from 'react-redux'
 import { registerUserThunk } from 'redux/operations'
-import styles from './RegistrationForm.module.css'
+// import styles from './RegistrationForm.module.css'
 import { UserOutlined, MailOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
 import { FormInput, StyedFormTitle, StyledLoginBtn, StyledLoginForm, StyledLoginFormLabel } from 'components/LoginForm/LoginForm.styled';
 
@@ -22,9 +22,9 @@ export const RegistrationForm = () => {
       form.reset();
    }
 
-   return <div className={styles.registerContainer}>
-      <StyedFormTitle className={styles.registerTittle}>Register Your Account</StyedFormTitle>
-      <StyledLoginForm className={styles.registrationForm}
+   return <div >
+      <StyedFormTitle >Register Your Account</StyedFormTitle>
+      <StyledLoginForm 
          autoComplete='off' onSubmit={handleSubmit} >
          <StyledLoginFormLabel>
             Name
@@ -54,7 +54,7 @@ export const RegistrationForm = () => {
                minLength={7}
             />
          </StyledLoginFormLabel>
-         < StyledLoginBtn type="submit" className={styles.registrationBtn}>Sign up</ StyledLoginBtn>
+         < StyledLoginBtn type="submit">Sign up</ StyledLoginBtn>
       </StyledLoginForm>
    </div>
 }

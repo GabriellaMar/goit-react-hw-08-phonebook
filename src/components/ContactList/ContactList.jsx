@@ -1,5 +1,4 @@
-// import styles from './ContactList.module.css'
-// import PropTypes from 'prop-types';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContactThunk } from 'redux/operations';
 import { selectFilteredContacts } from 'redux/selectors';

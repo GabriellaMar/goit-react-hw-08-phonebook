@@ -6,8 +6,7 @@ export const StyledContactList = styled.ul`
     font-weight: 600;
     display: flex;
     flex-direction: column;
-      padding: 20px; 
-    /* max-width: 900px; */
+    padding: 20px; 
     box-shadow: 0px 1px  4px rgba(86, 114, 110, 0.856); 
     background:  rgba(242, 247, 247, 0.92);
     border-radius: 3px;
@@ -20,13 +19,12 @@ export const StyledContactList = styled.ul`
     }
 `
 export const StyledContactItem = styled.li`
-position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: flex-start;
     padding: 20px 0px;
-    /* align-items: center; */
     border-bottom: 1px solid rgba(193, 194, 194, 0.856);
 
     .contact{

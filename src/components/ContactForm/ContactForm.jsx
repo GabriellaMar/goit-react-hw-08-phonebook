@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState } from "react";
-// import PropTypes from 'prop-types';
-// import styles from './ContactForm.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { addContactThunk } from "redux/operations";
 import { selectFilteredContacts } from "redux/selectors";

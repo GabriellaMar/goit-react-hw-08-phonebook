@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { logOutUserThunk } from "redux/operations"
 import { selectUser } from "redux/selectors"
-// import styles from './UserMenu.module.css'
 import { UserOutlined } from '@ant-design/icons';
 import { Avatar } from 'antd';
 import { StyledContainer, StyledMenuBtn } from './UserMenu.styled';
