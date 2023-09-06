@@ -8,6 +8,8 @@ export const StyledLoginForm = styled.form`
     /* max-width: 380px; */
     height: 300px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right:15px;
 
     @media screen and (min-width: 768px){
     width: 740px;
@@ -40,9 +42,18 @@ position: relative;
         color: rgb(87, 87, 87);
     }
 
+    .passwordIcon{
+        position: absolute;
+        right: 15px; 
+        top: 60px; 
+        transform: translateY(-50%);
+        color: rgb(87, 87, 87);
+        font-size: '30px';
+    }
+
 `
 export const FormInput = styled.input`
-font-size: 20px;
+font-size: 18px;
     padding: 13px 13px 13px 47px;
     margin-top: 8px;
     border-radius: 4px;

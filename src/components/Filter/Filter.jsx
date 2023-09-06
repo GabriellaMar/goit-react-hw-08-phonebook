@@ -21,6 +21,7 @@ export const Filter = ({ filter }) => {
                 type="text"
                 name="filter"
                 title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+                placeholder='Name'
                 required
                 value={filter}
                 onChange={handleFilterChange}

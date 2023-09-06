@@ -2,10 +2,12 @@
 import { useDispatch } from 'react-redux'
 import { registerUserThunk } from 'redux/operations'
 // import styles from './RegistrationForm.module.css'
-import { UserOutlined, MailOutlined, EyeInvisibleOutlined } from '@ant-design/icons';
+import { UserOutlined, MailOutlined, EyeInvisibleOutlined, EyeOutlined, LockOutlined } from '@ant-design/icons';
 import { FormInput, StyedFormTitle, StyledLoginBtn, StyledLoginForm, StyledLoginFormLabel } from 'components/LoginForm/LoginForm.styled';
+import { useState } from 'react';
 
 export const RegistrationForm = () => {
+   const [showPassword, setShowPassword] = useState(false);
    const dispatch = useDispatch()
 
    const handleSubmit = (e) => {
@@ -22,6 +24,10 @@ export const RegistrationForm = () => {
       form.reset();
    }
 
+   const togglePasswordVisibility = () => {
+      setShowPassword(!showPassword);
+    };
+
    return <div >
       <StyedFormTitle >Register Your Account</StyedFormTitle>
       <StyledLoginForm 
@@ -32,6 +38,7 @@ export const RegistrationForm = () => {
             <FormInput className='registrationInput'
                type="text"
                name="userName"
+               placeholder='Enter your email name'
                required
             />
          </StyledLoginFormLabel>
@@ -41,17 +48,23 @@ export const RegistrationForm = () => {
             <FormInput className='registrationInput'
                type="email"
                name="userEmail"
+               placeholder='Enter your email address'
                required
             />
          </StyledLoginFormLabel>
          <StyledLoginFormLabel >
             Password
-            <EyeInvisibleOutlined  className='formIcon' />
+            <LockOutlined className='formIcon'  style={{ fontSize: 23 }} />
+            {showPassword ? ( <EyeOutlined className='passwordIcon' onClick={togglePasswordVisibility} />
+            ) : (  <EyeInvisibleOutlined  onClick={togglePasswordVisibility} className='passwordIcon' />)}
+     
             <FormInput className='registrationInput'
-               type="password"
+               // type="password"
+               type={showPassword ? 'text' : 'password'}
                name="userPassword"
                required
                minLength={7}
+               placeholder='Enter your password'
             />
          </StyledLoginFormLabel>
          < StyledLoginBtn type="submit">Sign up</ StyledLoginBtn>
