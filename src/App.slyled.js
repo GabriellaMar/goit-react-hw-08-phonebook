@@ -20,7 +20,7 @@ export const StyledHeader = styled.header`
     flex-direction: column;
     align-items: center;
     gap:25px;
-    padding: 30px 15px ;
+    padding: 23px 15px ;
 
  position: relative;
 
