@@ -14,6 +14,11 @@ display: block;
     margin-top: 30px;
     margin-bottom: 48px;
 
+
+    .iconInput{
+
+    }
+
     @media screen and (min-width: 480px){
       padding: 35px;
       margin-bottom: 65px;
@@ -39,9 +44,9 @@ export const StyledContactLabel = styled.label`
 
 
 .iconPhone {
-        position: absolute;
+  position: absolute;
         left: 15px; 
-        top: 56px; 
+        top: 59px; 
         transform: translateY(-50%);
         color: rgb(87, 87, 87);
       }
