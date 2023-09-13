@@ -38,7 +38,7 @@ export const RegistrationForm = () => {
             <FormInput className='registrationInput'
                type="text"
                name="userName"
-               placeholder='Enter your email name'
+               placeholder='Enter your name'
                required
             />
          </StyledLoginFormLabel>
